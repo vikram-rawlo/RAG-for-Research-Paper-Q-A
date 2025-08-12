@@ -1,7 +1,47 @@
+# === Python cache & virtual env ===
 venv/
-__pycache__/
-*.pyc
-*.pyo
 .env
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# === Jupyter notebooks ===
+.ipynb_checkpoints/
+*.nbconvert.ipynb
+
+# === API keys & config ===
+*.env
+.env.*
+config.json
+secrets.json
+
+# === Local vector DBs ===
+# Chroma, FAISS, Pinecone local dumps
+chroma/
+faiss_index/
+vectorstore/
+index/
+db.sqlite
 *.db
-.ipynb_checkpoints
+
+# === Temporary & logs ===
+*.log
+*.tmp
+*.temp
+
+# === OS files ===
+.DS_Store
+Thumbs.db
+
+# === Large data files ===
+# Keep small PDFs if needed, ignore large dump dirs
+data/
+datasets/
+*.zip
+*.tar.gz
+
+# === RAG-specific ===
+# Comment these if you *want* to track your PDFs or DB folder
+pdfs/
+rag_cache/
