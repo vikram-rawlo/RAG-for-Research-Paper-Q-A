@@ -1,6 +1,5 @@
 # === Python cache & virtual env ===
 venv/
-.env
 __pycache__/
 *.py[cod]
 *.pyo
@@ -11,13 +10,13 @@ __pycache__/
 *.nbconvert.ipynb
 
 # === API keys & config ===
-*.env
+.env
 .env.*
 config.json
 secrets.json
 
-# === Local vector DBs ===
-# Chroma, FAISS, Pinecone local dumps
+# === Local vector DBs & RAG-generated files ===
+storage/chroma_db/
 chroma/
 faiss_index/
 vectorstore/
@@ -34,14 +33,14 @@ db.sqlite
 .DS_Store
 Thumbs.db
 
-# === Large data files ===
-# Keep small PDFs if needed, ignore large dump dirs
-data/
+# === Large data files / datasets ===
 datasets/
 *.zip
 *.tar.gz
 
-# === RAG-specific ===
-# Comment these if you *want* to track your PDFs or DB folder
-pdfs/
+# === PDFs ===
+# Keep PDFs in version control (small size)
+!data/pdfs/
+
+# === RAG-specific cache ===
 rag_cache/
